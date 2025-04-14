@@ -3,7 +3,8 @@ const ConnectDB = require("./config/db");
 require ('dotenv').config();
 
 const app = express();
-const cors = require("cors");
+
+
 
 const dashboardRouter = require("./Router/userRouter");
 app.use(express.json());
