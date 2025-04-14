@@ -1,12 +1,13 @@
 const express = require("express");
-const ConnectDB = require("./config/db")
+const ConnectDB = require("./config/db");
 require ('dotenv').config();
+
 const app = express();
-
-
+const cors = require("cors");
 
 const dashboardRouter = require("./Router/userRouter");
 app.use(express.json());
+
 
 app.use('/curd',dashboardRouter);
 
