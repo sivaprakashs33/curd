@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const ConnectDB = require("./config/db");
 require ('dotenv').config();
+const bodyparsel = require("body-parser");
 
 const app = express();
 
-
+app.use(cors());
 
 const dashboardRouter = require("./Router/userRouter");
 app.use(express.json());
